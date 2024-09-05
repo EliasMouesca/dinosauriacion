@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+   <head>
+       <title>¡ 🦕 !</title>
+   </head>
+
+   <body>
+      <img id=image src="planet.png">
+      <p id="randomPhrase"><p>
+   </body>
+
+<style>
+    @font-face {
+        font-family: 'MyFont';
+        src: url('font.ttf');
+    }
+
+    #image{
+        display: block;
+        margin: 0 auto;
+        padding: 5% 0px 0px 0px;
+    }
+
+    p{
+        color: black;
+        font-size: 40px;
+        font-weight: bold;
+        text-align: center;
+        font-family: "MyFont";
+    }
+
+</style>
+
+<script>
+    var darkMode = true;
+
+    var phrases = [
+        "La felicidad está en las personas.",
+        "Otro día en el mejor de los mundos posibles.",
+        "Hoy es el mejor día.",
+        "mmm empanadas digitales.",
+        "Dios es ingeniero.",
+        "Si la vida es algo, es bella.",
+        "¿Cómo hice para vivir un mes sin vivir?",
+        "No hay vuelta que la vida no pueda dar.",
+        "Si vamos de final en final, no nos van a quedar recuerdos después de todo.",
+        "Quizá solo yo existo... mmm...",
+        "La vida es tan no-lo-que-esperamos.",
+        "Tratemos de amar todo; en una de esas, nos sale.",
+        "Nada fue, nada va a ser; todo es.",
+        "Cada cosa es un pequeño cosmos.",
+        "Hay instantes de paz en la vida.",
+        "Cómo cambió todo, ¿no?",
+        "¿Para qué pasa lo que pasa?",
+        "¿Qué habrá pasado hoy hace muchos años?",
+        "Todos tenemos muchas personalidades.",
+        "¡No hay nada perdido!",
+        "Nada es lineal, es todo cíclico.",
+        "El destino quizá es una sugerencia.",
+        "La vida realmente está en los detalles.",
+        "Todo pasa; para bien y para mal.",
+        "¡Que nos encante lo que nos gusta!",
+        "Aguante todo.",
+        "Mejor perder a no apostar.",
+        "Con esto me alcanza.",
+        "Es todo para mejor.",
+        "Vamos a besar gatos!",
+        "Tortilla de papa con puré",
+        "Es re opcional la cuarta pata de la silla.",
+        "...999 + 1 = 0",
+        "Me dolió, y encima, ¿me tiene que enojar también?",
+        "La vida hace justicia a su manera.",
+        "Hoy voy a ser feliz 50 veces.",
+        "Che... bah, como si supiese algo",
+        "Perdonar por nuestro propio bien."
+    ];
+
+    function getRandomPhrase() {
+        return phrases[Math.floor(Math.random() * phrases.length)];
+    }
+
+    function updateRandomPhrase() {
+        var randomPhraseElement = document.getElementById('randomPhrase');
+        randomPhraseElement.textContent = getRandomPhrase();
+    }
+
+    function invert() {
+        document.getElementById('image').style.filter = 'invert(100%)'; 
+        document.body.style.backgroundColor = 'black';
+        document.getElementById('randomPhrase').style.color = 'white';
+    }
+
+    if (darkMode) {
+        invert();
+    }
+
+
+    window.onload = updateRandomPhrase;
+   </script>
+
+</html>

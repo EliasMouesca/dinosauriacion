@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html class="inverted">
+   <head>
+       <title>🦖</title>
+   </head>
+
+   <body>
+   </body>
+
+<style>
+    .inverted {
+        filter: invert(100%);
+    }
+
+    html {
+        background: url('fondo.png') no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+    }
+
+    p{
+        color: black;
+        font-size: 40px;
+        font-weight: bold;
+        text-align: center;
+        font-family: "MyFont";
+    }
+
+</style>
+
+<script>
+    var darkMode = true;
+
+    function invert() {
+        document.body.classList.toggle('inverted');
+    }
+
+    if (darkMode) {
+        invert();
+    }
+
+   </script>
+
+</html>
